@@ -1,2 +1,2 @@
 # jain
-jain
+Function for greeting and 24 Tirthankara's name
