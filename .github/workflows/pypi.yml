@@ -26,7 +26,7 @@ jobs:
         pip install build twine bump2version
     - name: Bump version and create tag
       run: |
-        bump2version patch  # Change to minor or major if needed
+        bump2version patch --no-tag --no-commit
     - name: Build package
       run: python -m build
     - name: Publish package
