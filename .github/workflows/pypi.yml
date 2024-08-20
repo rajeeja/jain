@@ -32,7 +32,7 @@ jobs:
       run: rm -rf dist
     - name: Bump version
       run: |
-        bump2version patch  # Commit and tag will work now
+        bump2version patch  # Ensure this correctly updates the version number
     - name: Build package
       run: python -m build
     - name: Publish package
