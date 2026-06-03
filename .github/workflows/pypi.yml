@@ -23,16 +23,9 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install build twine bump2version
-    - name: Configure Git
-      run: |
-        git config --global user.name "GitHub Actions"
-        git config --global user.email "actions@github.com"
+        pip install build twine
     - name: Clean dist directory
       run: rm -rf dist
-    - name: Bump version
-      run: |
-        bump2version patch  # Ensure this correctly updates the version number
     - name: Build package
       run: python -m build
     - name: Publish package
